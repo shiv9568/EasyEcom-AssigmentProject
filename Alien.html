@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rick and Morty Character Explorer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Rick and Morty Character Explorer</h1>
+        <p class="tagline">Explore characters from across the multiverse</p>
+      </header>
+
+      <div class="search-section">
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search characters by name, species, or gender..."
+          />
+          <i class="fas fa-search"></i>
+        </div>
+
+        <div class="filters">
+          <select id="status-filter" class="filter">
+            <option value="">All Statuses</option>
+            <option value="alive">Alive</option>
+            <option value="dead">Dead</option>
+            <option value="unknown">Unknown</option>
+          </select>
+
+          <select id="gender-filter" class="filter">
+            <option value="">All Genders</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="genderless">Genderless</option>
+            <option value="unknown">Unknown</option>
+          </select>
+
+          <select id="species-filter" class="filter">
+            <option value="">All Species</option>
+            <option value="human">Human</option>
+            <option value="humanoid">Humanoid</option>
+            <option value="cronenberg">Cronenberg</option>
+            <option value="alien">Alien</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="characters-container" class="characters-grid">
+        
+        <div class="loading">Loading characters...</div>
+      </div>
+
+      <div class="pagination">
+        <button id="prev-btn" disabled>Previous</button>
+        <button id="next-btn">Next</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
